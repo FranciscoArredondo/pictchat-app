@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06BF4E411F20203C0001BD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E401F20203C0001BD3C /* AppDelegate.swift */; };
-		06BF4E431F20203C0001BD3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E421F20203C0001BD3C /* ViewController.swift */; };
+		06BF4E431F20203C0001BD3C /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E421F20203C0001BD3C /* CameraVC.swift */; };
 		06BF4E461F20203C0001BD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4E441F20203C0001BD3C /* Main.storyboard */; };
 		06BF4E481F20203C0001BD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4E471F20203C0001BD3C /* Assets.xcassets */; };
 		06BF4E4B1F20203C0001BD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4E491F20203C0001BD3C /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		06BF4E3D1F20203C0001BD3C /* PictChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BF4E401F20203C0001BD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06BF4E421F20203C0001BD3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06BF4E421F20203C0001BD3C /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		06BF4E451F20203C0001BD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06BF4E471F20203C0001BD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06BF4E4A1F20203C0001BD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				06BF4E401F20203C0001BD3C /* AppDelegate.swift */,
-				06BF4E421F20203C0001BD3C /* ViewController.swift */,
+				06BF4E421F20203C0001BD3C /* CameraVC.swift */,
 				06BF4E441F20203C0001BD3C /* Main.storyboard */,
 				06BF4E471F20203C0001BD3C /* Assets.xcassets */,
 				06BF4E491F20203C0001BD3C /* LaunchScreen.storyboard */,
@@ -261,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06BF4E431F20203C0001BD3C /* ViewController.swift in Sources */,
+				06BF4E431F20203C0001BD3C /* CameraVC.swift in Sources */,
 				06BF4E411F20203C0001BD3C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
