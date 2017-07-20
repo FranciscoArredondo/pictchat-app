@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060CF1901F20373C00767734 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060CF18E1F20373C00767734 /* CameraViewController.swift */; };
+		060CF1911F20373C00767734 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060CF18F1F20373C00767734 /* PreviewView.swift */; };
+		060CF1961F2037C900767734 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060CF1951F2037C900767734 /* PhotoCaptureDelegate.swift */; };
 		06BF4E411F20203C0001BD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E401F20203C0001BD3C /* AppDelegate.swift */; };
 		06BF4E431F20203C0001BD3C /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E421F20203C0001BD3C /* CameraVC.swift */; };
 		06BF4E461F20203C0001BD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4E441F20203C0001BD3C /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060CF18E1F20373C00767734 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		060CF18F1F20373C00767734 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		060CF1951F2037C900767734 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		06BF4E3D1F20203C0001BD3C /* PictChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BF4E401F20203C0001BD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06BF4E421F20203C0001BD3C /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -74,6 +80,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060CF1921F20374000767734 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		060CF1931F20374A00767734 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				060CF18F1F20373C00767734 /* PreviewView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		060CF1941F20375000767734 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06BF4E421F20203C0001BD3C /* CameraVC.swift */,
+				060CF18E1F20373C00767734 /* CameraViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		06BF4E341F20203C0001BD3C = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +127,11 @@
 		06BF4E3F1F20203C0001BD3C /* PictChat */ = {
 			isa = PBXGroup;
 			children = (
+				060CF1941F20375000767734 /* Controller */,
+				060CF1931F20374A00767734 /* View */,
+				060CF1921F20374000767734 /* Model */,
 				06BF4E401F20203C0001BD3C /* AppDelegate.swift */,
-				06BF4E421F20203C0001BD3C /* CameraVC.swift */,
+				060CF1951F2037C900767734 /* PhotoCaptureDelegate.swift */,
 				06BF4E441F20203C0001BD3C /* Main.storyboard */,
 				06BF4E471F20203C0001BD3C /* Assets.xcassets */,
 				06BF4E491F20203C0001BD3C /* LaunchScreen.storyboard */,
@@ -262,7 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BF4E431F20203C0001BD3C /* CameraVC.swift in Sources */,
+				060CF1911F20373C00767734 /* PreviewView.swift in Sources */,
 				06BF4E411F20203C0001BD3C /* AppDelegate.swift in Sources */,
+				060CF1961F2037C900767734 /* PhotoCaptureDelegate.swift in Sources */,
+				060CF1901F20373C00767734 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +551,7 @@
 				06BF4E671F20203C0001BD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06BF4E681F20203C0001BD3C /* Build configuration list for PBXNativeTarget "PictChatTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +560,7 @@
 				06BF4E6A1F20203C0001BD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06BF4E6B1F20203C0001BD3C /* Build configuration list for PBXNativeTarget "PictChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +569,7 @@
 				06BF4E6D1F20203C0001BD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
