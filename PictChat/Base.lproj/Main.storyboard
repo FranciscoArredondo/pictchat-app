@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,131 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-PX-Dvo" userLabel="PreviewView" customClass="AAPLPreviewView" customModule="PictChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Unavailable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTw-Pr-KYl" userLabel="Unavailable Label">
+                                <rect key="frame" x="111" y="223" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capturing Live Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-3W-SmG" userLabel="Live Photo Label">
+                                <rect key="frame" x="107.5" y="123" width="160.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyJ-CL-wYH" userLabel="Resume Button">
+                                <rect key="frame" x="135" y="318" width="105" height="30"/>
+                                <state key="normal" title="Resume Button"/>
+                                <connections>
+                                    <action selector="resumeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HlV-zl-OQL"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F7K-dV-U3H">
+                                <rect key="frame" x="91" y="551" width="194" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="q0W-rQ-k9l"/>
+                                    <constraint firstAttribute="height" constant="28" id="wQT-lU-5hg"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Photo"/>
+                                    <segment title="Movie"/>
+                                </segments>
+                                <connections>
+                                    <action selector="captureControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="r5I-tA-DKg"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ur7-du-gh5">
+                                <rect key="frame" x="16" y="28" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="6aE-5M-GOy"/>
+                                    <constraint firstAttribute="height" constant="30" id="pap-CF-c9S"/>
+                                </constraints>
+                                <state key="normal" title="Live Photo Button"/>
+                                <connections>
+                                    <action selector="livePhotoToggleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Us-c9-lTy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5K-yj-01r">
+                                <rect key="frame" x="167.5" y="619" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MqB-Mi-ge8"/>
+                                    <constraint firstAttribute="width" constant="40" id="b2e-zj-ThH"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w7F-vg-o3Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-G1-C9A">
+                                <rect key="frame" x="319" y="28" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="XSd-2M-O14"/>
+                                    <constraint firstAttribute="height" constant="40" id="kL6-cg-DyD"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changeCameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPH-fN-PFq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-n4-Tb9">
+                                <rect key="frame" x="259" y="629" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Z8E-Be-h5u"/>
+                                    <constraint firstAttribute="width" constant="100" id="qoD-t4-YVM"/>
+                                </constraints>
+                                <state key="normal" title="Photo Button"/>
+                                <connections>
+                                    <action selector="photoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbl-sU-9Ey"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S5K-yj-01r" firstAttribute="top" secondItem="F7K-dV-U3H" secondAttribute="bottom" constant="40" id="0cB-T9-dWg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S5K-yj-01r" secondAttribute="bottom" constant="8" id="0gm-mf-84J"/>
+                            <constraint firstAttribute="trailing" secondItem="SVZ-PX-Dvo" secondAttribute="trailing" id="2Ze-S6-m6e"/>
+                            <constraint firstItem="SyJ-CL-wYH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Bh-WA-Vtm"/>
+                            <constraint firstItem="eTw-Pr-KYl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AtV-ZF-khH"/>
+                            <constraint firstItem="S5K-yj-01r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BmD-VW-96F"/>
+                            <constraint firstItem="SVZ-PX-Dvo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Crd-SV-Inp"/>
+                            <constraint firstItem="ur7-du-gh5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HVk-ez-wjx"/>
+                            <constraint firstItem="Dmi-G1-C9A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Qji-R3-krb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dmi-G1-C9A" secondAttribute="trailing" id="Yg6-Ts-JY2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0gQ-n4-Tb9" secondAttribute="trailing" id="Yt3-on-fVR"/>
+                            <constraint firstItem="SVZ-PX-Dvo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a6v-js-pRo"/>
+                            <constraint firstItem="eTw-Pr-KYl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="aNQ-6E-N9Y"/>
+                            <constraint firstItem="mN6-3W-SmG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="d47-BS-MI2"/>
+                            <constraint firstItem="SyJ-CL-wYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ebc-s0-IXk"/>
+                            <constraint firstItem="mN6-3W-SmG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJv-tu-rLG"/>
+                            <constraint firstItem="F7K-dV-U3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mn6-zx-zAn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0gQ-n4-Tb9" secondAttribute="bottom" constant="8" id="pvS-2B-2l8"/>
+                            <constraint firstItem="ur7-du-gh5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="sod-Dg-aJe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SVZ-PX-Dvo" secondAttribute="bottom" id="tRR-UC-y37"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="Dmi-G1-C9A" id="mhQ-CD-QkP"/>
+                        <outlet property="cameraUnavailableLabel" destination="eTw-Pr-KYl" id="7kE-RD-dKO"/>
+                        <outlet property="captureModeControl" destination="F7K-dV-U3H" id="esq-6N-3Bi"/>
+                        <outlet property="capturingLivePhotoLabel" destination="mN6-3W-SmG" id="lKP-AJ-Uf9"/>
+                        <outlet property="livePhotoButton" destination="ur7-du-gh5" id="L62-a0-qwh"/>
+                        <outlet property="photoButton" destination="0gQ-n4-Tb9" id="5JG-c9-DqD"/>
+                        <outlet property="previewView" destination="SVZ-PX-Dvo" id="27r-Rg-FlY"/>
+                        <outlet property="recordButton" destination="S5K-yj-01r" id="MPw-6I-bhq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
 </document>
