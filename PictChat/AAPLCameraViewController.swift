@@ -21,7 +21,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         _recordButton.isEnabled = false
         _photoButton.isEnabled = false
 //        _livePhotoModeButton.isEnabled = false
-        _captureModeControl.isEnabled = false
+//        _captureModeControl.isEnabled = false
         
         // Set up the video preview view.
         _previewView.session = session
@@ -302,16 +302,16 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         }
     }
     
-    private enum CaptureMode: Int {
+    enum CaptureMode: Int {
         case photo = 0
         case movie = 1
     }
     
-    weak var _captureModeControl: UISegmentedControl!
+//    weak var _captureModeControl: UISegmentedControl!
     
     // PF - refactor action
-    func toggleCaptureMode() {
-        if _captureModeControl.selectedSegmentIndex == CaptureMode.photo.rawValue {
+    func toggleCaptureMode(captureMode: CaptureMode) {
+        if captureMode == CaptureMode.photo {
             _recordButton.isEnabled = false
             
             sessionQueue.async { [unowned self] in
@@ -337,7 +337,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                 }
             }
         }
-        else if _captureModeControl.selectedSegmentIndex == CaptureMode.movie.rawValue
+        else if captureMode == CaptureMode.movie
         {
 //            _livePhotoModeButton.isHidden = true
             
@@ -379,7 +379,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         _recordButton.isEnabled = false
         _photoButton.isEnabled = false
 //        _livePhotoModeButton.isEnabled = false
-        _captureModeControl.isEnabled = false
+//        _captureModeControl.isEnabled = false
         
         sessionQueue.async { [unowned self] in
             let currentVideoDevice = self.videoDeviceInput.device
@@ -455,7 +455,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                 self._recordButton.isEnabled = self.movieFileOutput != nil
                 self._photoButton.isEnabled = true
 //                self._livePhotoModeButton.isEnabled = true
-                self._captureModeControl.isEnabled = true
+//                self._captureModeControl.isEnabled = true
             }
         }
     }
@@ -638,7 +638,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
          */
         _cameraButton.isEnabled = false
         _recordButton.isEnabled = false
-        _captureModeControl.isEnabled = false
+//        _captureModeControl.isEnabled = false
         
         /*
          Retrieve the video preview layer's video orientation on the main queue
@@ -754,7 +754,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
             // Only enable the ability to change camera if the device has more than one camera.
             self._cameraButton.isEnabled = self.videoDeviceDiscoverySession.uniqueDevicePositionsCount() > 1
             self._recordButton.isEnabled = true
-            self._captureModeControl.isEnabled = true
+//            self._captureModeControl.isEnabled = true
             self._recordButton.setTitle(NSLocalizedString("Record", comment: "Recording button record title"), for: [])
         }
     }
@@ -798,7 +798,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                 self._cameraButton.isEnabled = isSessionRunning && self.videoDeviceDiscoverySession.uniqueDevicePositionsCount() > 1
                 self._recordButton.isEnabled = isSessionRunning && self.movieFileOutput != nil
                 self._photoButton.isEnabled = isSessionRunning
-                self._captureModeControl.isEnabled = isSessionRunning
+//                self._captureModeControl.isEnabled = isSessionRunning
 //                self._livePhotoModeButton.isEnabled = isSessionRunning && isLivePhotoCaptureEnabled
 //                self._livePhotoModeButton.isHidden = !(isSessionRunning && isLivePhotoCaptureSupported)
             }

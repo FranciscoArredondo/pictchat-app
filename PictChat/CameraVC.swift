@@ -36,12 +36,14 @@ class CameraVC: AAPLCameraViewController {
         _recordButton = recordButton
         _photoButton = photoButton
 //        _livePhotoModeButton = livePhotoButton
-        _captureModeControl = captureModeControl
+//        _captureModeControl = captureModeControl
         _resumeButton = resumeButton
         _cameraUnavailableLabel = cameraUnavailableLabel
         _capturingLivePhotoLabel = capturingLivePhotoLabel
         
+        
         super.viewDidLoad()
+        toggleCaptureMode(captureMode: .movie)
     }
 
     @IBAction func recordButtonPressed(_ sender: UIButton) {
@@ -53,7 +55,7 @@ class CameraVC: AAPLCameraViewController {
     }
     
     @IBAction func captureControlValueChanged(_ sender: UISegmentedControl) {
-        toggleCaptureMode()
+//        toggleCaptureMode()
     }
     
     @IBAction func resumeButtonPressed(_ sender: UIButton) {
