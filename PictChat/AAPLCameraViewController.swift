@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Photos
 
-class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
+class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     // MARK: View Controller Life Cycle
     
     override func viewDidLoad() {
@@ -211,7 +211,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
                      on the AVCaptureVideoPreviewLayer’s connection with other session manipulation.
                      
                      Use the status bar orientation as the initial video orientation. Subsequent orientation changes are
-                     handled by CameraViewController.viewWillTransition(to:with:).
+                     handled by AAPLCameraViewController.viewWillTransition(to:with:).
                      */
                     let statusBarOrientation = UIApplication.shared.statusBarOrientation
                     var initialVideoOrientation: AVCaptureVideoOrientation = .portrait
