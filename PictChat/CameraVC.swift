@@ -39,7 +39,7 @@ class CameraVC: AAPLCameraViewController {
 //        _captureModeControl = captureModeControl
         _resumeButton = resumeButton
         _cameraUnavailableLabel = cameraUnavailableLabel
-        _capturingLivePhotoLabel = capturingLivePhotoLabel
+//        _capturingLivePhotoLabel = capturingLivePhotoLabel
         
         
         super.viewDidLoad()

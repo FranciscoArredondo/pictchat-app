@@ -554,18 +554,18 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                         self.inProgressLivePhotoCapturesCount -= 1
                     }
                     
-                    let inProgressLivePhotoCapturesCount = self.inProgressLivePhotoCapturesCount
-                    DispatchQueue.main.async { [unowned self] in
-                        if inProgressLivePhotoCapturesCount > 0 {
-                            self._capturingLivePhotoLabel.isHidden = false
-                        }
-                        else if inProgressLivePhotoCapturesCount == 0 {
-                            self._capturingLivePhotoLabel.isHidden = true
-                        }
-                        else {
-                            print("Error: In progress live photo capture count is less than 0");
-                        }
-                    }
+//                    let inProgressLivePhotoCapturesCount = self.inProgressLivePhotoCapturesCount
+//                    DispatchQueue.main.async { [unowned self] in
+//                        if inProgressLivePhotoCapturesCount > 0 {
+//                            self._capturingLivePhotoLabel.isHidden = false
+//                        }
+//                        else if inProgressLivePhotoCapturesCount == 0 {
+//                            self._capturingLivePhotoLabel.isHidden = true
+//                        }
+//                        else {
+//                            print("Error: In progress live photo capture count is less than 0");
+//                        }
+//                    }
                 }
             }, completed: { [unowned self] photoCaptureDelegate in
                 // When the capture is complete, remove a reference to the photo capture delegate so it can be deallocated.
@@ -612,7 +612,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
     
     private var inProgressLivePhotoCapturesCount = 0
     
-    weak var _capturingLivePhotoLabel: UILabel!
+//    weak var _capturingLivePhotoLabel: UILabel!
     
     // MARK: Recording Movies
     
