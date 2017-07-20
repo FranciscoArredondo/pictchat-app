@@ -20,7 +20,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         _cameraButton.isEnabled = false
         _recordButton.isEnabled = false
         _photoButton.isEnabled = false
-        _livePhotoModeButton.isEnabled = false
+//        _livePhotoModeButton.isEnabled = false
         _captureModeControl.isEnabled = false
         
         // Set up the video preview view.
@@ -261,7 +261,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
             
             photoOutput.isHighResolutionCaptureEnabled = true
             photoOutput.isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureSupported
-            livePhotoMode = photoOutput.isLivePhotoCaptureSupported ? .on : .off
+//            livePhotoMode = photoOutput.isLivePhotoCaptureSupported ? .on : .off
         }
         else {
             print("Could not add photo output to the session")
@@ -330,16 +330,16 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                 if self.photoOutput.isLivePhotoCaptureSupported {
                     self.photoOutput.isLivePhotoCaptureEnabled = true
                     
-                    DispatchQueue.main.async {
-                        self._livePhotoModeButton.isEnabled = true
-                        self._livePhotoModeButton.isHidden = false
-                    }
+//                    DispatchQueue.main.async {
+//                        self._livePhotoModeButton.isEnabled = true
+//                        self._livePhotoModeButton.isHidden = false
+//                    }
                 }
             }
         }
         else if _captureModeControl.selectedSegmentIndex == CaptureMode.movie.rawValue
         {
-            _livePhotoModeButton.isHidden = true
+//            _livePhotoModeButton.isHidden = true
             
             sessionQueue.async { [unowned self] in
                 let movieFileOutput = AVCaptureMovieFileOutput()
@@ -378,7 +378,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         _cameraButton.isEnabled = false
         _recordButton.isEnabled = false
         _photoButton.isEnabled = false
-        _livePhotoModeButton.isEnabled = false
+//        _livePhotoModeButton.isEnabled = false
         _captureModeControl.isEnabled = false
         
         sessionQueue.async { [unowned self] in
@@ -454,7 +454,7 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                 self._cameraButton.isEnabled = true
                 self._recordButton.isEnabled = self.movieFileOutput != nil
                 self._photoButton.isEnabled = true
-                self._livePhotoModeButton.isEnabled = true
+//                self._livePhotoModeButton.isEnabled = true
                 self._captureModeControl.isEnabled = true
             }
         }
@@ -525,11 +525,12 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
             if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
                 photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
             }
-            if self.livePhotoMode == .on && self.photoOutput.isLivePhotoCaptureSupported { // Live Photo capture is not supported in movie mode.
-                let livePhotoMovieFileName = NSUUID().uuidString
-                let livePhotoMovieFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((livePhotoMovieFileName as NSString).appendingPathExtension("mov")!)
-                photoSettings.livePhotoMovieFileURL = URL(fileURLWithPath: livePhotoMovieFilePath)
-            }
+//            if self.livePhotoMode == .on && self.photoOutput.isLivePhotoCaptureSupported {
+//                // Live Photo capture is not supported in movie mode.
+//                let livePhotoMovieFileName = NSUUID().uuidString
+//                let livePhotoMovieFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((livePhotoMovieFileName as NSString).appendingPathExtension("mov")!)
+//                photoSettings.livePhotoMovieFileURL = URL(fileURLWithPath: livePhotoMovieFilePath)
+//            }
             
             // Use a separate object for the photo capture delegate to isolate each capture life cycle.
             let photoCaptureDelegate = PhotoCaptureDelegate(with: photoSettings, willCapturePhotoAnimation: {
@@ -584,30 +585,30 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         }
     }
     
-    private enum LivePhotoMode {
-        case on
-        case off
-    }
+//    private enum LivePhotoMode {
+//        case on
+//        case off
+//    }
     
-    private var livePhotoMode: LivePhotoMode = .off
+//    private var livePhotoMode: LivePhotoMode = .off
     
-    weak var _livePhotoModeButton: UIButton!
+//    weak var _livePhotoModeButton: UIButton!
     
-    func toggleLivePhotoMode() {
-        sessionQueue.async { [unowned self] in
-            self.livePhotoMode = (self.livePhotoMode == .on) ? .off : .on
-            let livePhotoMode = self.livePhotoMode
-            
-            DispatchQueue.main.async { [unowned self] in
-                if livePhotoMode == .on {
-                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: On", comment: "Live photo mode button on title"), for: [])
-                }
-                else {
-                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: Off", comment: "Live photo mode button off title"), for: [])
-                }
-            }
-        }
-    }
+//    func toggleLivePhotoMode() {
+//        sessionQueue.async { [unowned self] in
+//            self.livePhotoMode = (self.livePhotoMode == .on) ? .off : .on
+//            let livePhotoMode = self.livePhotoMode
+//            
+//            DispatchQueue.main.async { [unowned self] in
+//                if livePhotoMode == .on {
+//                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: On", comment: "Live photo mode button on title"), for: [])
+//                }
+//                else {
+//                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: Off", comment: "Live photo mode button off title"), for: [])
+//                }
+//            }
+//        }
+//    }
     
     private var inProgressLivePhotoCapturesCount = 0
     
@@ -789,8 +790,8 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         if context == &sessionRunningObserveContext {
             let newValue = change?[.newKey] as AnyObject?
             guard let isSessionRunning = newValue?.boolValue else { return }
-            let isLivePhotoCaptureSupported = photoOutput.isLivePhotoCaptureSupported
-            let isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureEnabled
+//            let isLivePhotoCaptureSupported = photoOutput.isLivePhotoCaptureSupported
+//            let isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureEnabled
             
             DispatchQueue.main.async { [unowned self] in
                 // Only enable the ability to change camera if the device has more than one camera.
@@ -798,8 +799,8 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                 self._recordButton.isEnabled = isSessionRunning && self.movieFileOutput != nil
                 self._photoButton.isEnabled = isSessionRunning
                 self._captureModeControl.isEnabled = isSessionRunning
-                self._livePhotoModeButton.isEnabled = isSessionRunning && isLivePhotoCaptureEnabled
-                self._livePhotoModeButton.isHidden = !(isSessionRunning && isLivePhotoCaptureSupported)
+//                self._livePhotoModeButton.isEnabled = isSessionRunning && isLivePhotoCaptureEnabled
+//                self._livePhotoModeButton.isHidden = !(isSessionRunning && isLivePhotoCaptureSupported)
             }
         }
         else {

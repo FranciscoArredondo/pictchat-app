@@ -35,7 +35,7 @@ class CameraVC: AAPLCameraViewController {
         _cameraButton = cameraButton
         _recordButton = recordButton
         _photoButton = photoButton
-        _livePhotoModeButton = livePhotoButton
+//        _livePhotoModeButton = livePhotoButton
         _captureModeControl = captureModeControl
         _resumeButton = resumeButton
         _cameraUnavailableLabel = cameraUnavailableLabel
@@ -65,7 +65,7 @@ class CameraVC: AAPLCameraViewController {
     }
     
     @IBAction func livePhotoToggleButtonPressed(_ sender: UIButton) {
-        toggleLivePhotoMode()
+//        toggleLivePhotoMode()
     }
 }
 
