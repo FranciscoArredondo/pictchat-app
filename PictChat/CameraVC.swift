@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraVC: UIViewController {
+class CameraVC: CameraViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,6 @@ class CameraVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
