@@ -18,6 +18,7 @@
 		06BF4E4B1F20203C0001BD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4E491F20203C0001BD3C /* LaunchScreen.storyboard */; };
 		06BF4E561F20203C0001BD3C /* PictChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E551F20203C0001BD3C /* PictChatTests.swift */; };
 		06BF4E611F20203C0001BD3C /* PictChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E601F20203C0001BD3C /* PictChatUITests.swift */; };
+		06D161C21F22ACED00B467E1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D161C11F22ACED00B467E1 /* LoginVC.swift */; };
 		06DA22A01F21874A003BD7ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DA229F1F21874A003BD7ED /* GoogleService-Info.plist */; };
 		06FA2C9D1F21C2F00044ED97 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA2C9C1F21C2F00044ED97 /* RoundTextField.swift */; };
 		10D94192E597A1917EB516AB /* Pods_PictChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEFABE9258D749C861F1716 /* Pods_PictChatTests.framework */; };
@@ -60,6 +61,7 @@
 		06BF4E5C1F20203C0001BD3C /* PictChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BF4E601F20203C0001BD3C /* PictChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictChatUITests.swift; sourceTree = "<group>"; };
 		06BF4E621F20203C0001BD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D161C11F22ACED00B467E1 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		06DA229F1F21874A003BD7ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		06FA2C9C1F21C2F00044ED97 /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		4300268DD5BCB2A5D49E43D1 /* Pods-PictChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PictChatTests/Pods-PictChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		060CF1941F20375000767734 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				06D161C11F22ACED00B467E1 /* LoginVC.swift */,
 				06BF4E421F20203C0001BD3C /* CameraVC.swift */,
 				060CF18E1F20373C00767734 /* AAPLCameraViewController.swift */,
 			);
@@ -501,6 +504,7 @@
 			files = (
 				06BF4E431F20203C0001BD3C /* CameraVC.swift in Sources */,
 				060CF1911F20373C00767734 /* AAPLPreviewView.swift in Sources */,
+				06D161C21F22ACED00B467E1 /* LoginVC.swift in Sources */,
 				06BF4E411F20203C0001BD3C /* AppDelegate.swift in Sources */,
 				060CF1961F2037C900767734 /* PhotoCaptureDelegate.swift in Sources */,
 				0667DFC11F21CFD800C94147 /* RoundedButton.swift in Sources */,
