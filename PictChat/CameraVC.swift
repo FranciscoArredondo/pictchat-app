@@ -18,13 +18,7 @@ class CameraVC: AAPLCameraViewController {
     
     @IBOutlet weak var photoButton: UIButton!
     
-    @IBOutlet weak var livePhotoButton: UIButton!
-    
-    @IBOutlet weak var captureModeControl: UISegmentedControl!
-    
     @IBOutlet weak var resumeButton: UIButton!
-    
-    @IBOutlet weak var capturingLivePhotoLabel: UILabel!
     
     @IBOutlet weak var cameraUnavailableLabel: UILabel!
     
@@ -35,11 +29,8 @@ class CameraVC: AAPLCameraViewController {
         _cameraButton = cameraButton
         _recordButton = recordButton
         _photoButton = photoButton
-//        _livePhotoModeButton = livePhotoButton
-//        _captureModeControl = captureModeControl
         _resumeButton = resumeButton
         _cameraUnavailableLabel = cameraUnavailableLabel
-//        _capturingLivePhotoLabel = capturingLivePhotoLabel
         
         
         super.viewDidLoad()
@@ -54,10 +45,6 @@ class CameraVC: AAPLCameraViewController {
         changeCamera()
     }
     
-    @IBAction func captureControlValueChanged(_ sender: UISegmentedControl) {
-//        toggleCaptureMode()
-    }
-    
     @IBAction func resumeButtonPressed(_ sender: UIButton) {
         resumeInterruptedSession()
     }
@@ -66,8 +53,5 @@ class CameraVC: AAPLCameraViewController {
         capturePhoto()
     }
     
-    @IBAction func livePhotoToggleButtonPressed(_ sender: UIButton) {
-//        toggleLivePhotoMode()
-    }
 }
 

@@ -32,12 +32,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capturing Live Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-3W-SmG" userLabel="Live Photo Label">
-                                <rect key="frame" x="107.5" y="123" width="160.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyJ-CL-wYH" userLabel="Resume Button">
                                 <rect key="frame" x="135" y="318" width="105" height="30"/>
                                 <state key="normal" title="Resume Button"/>
@@ -45,40 +39,15 @@
                                     <action selector="resumeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HlV-zl-OQL"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F7K-dV-U3H">
-                                <rect key="frame" x="91" y="551" width="194" height="29"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5K-yj-01r">
+                                <rect key="frame" x="152.5" y="589" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="q0W-rQ-k9l"/>
-                                    <constraint firstAttribute="height" constant="28" id="wQT-lU-5hg"/>
+                                    <constraint firstAttribute="height" constant="70" id="MqB-Mi-ge8"/>
+                                    <constraint firstAttribute="width" constant="70" id="b2e-zj-ThH"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="Photo"/>
-                                    <segment title="Movie"/>
-                                </segments>
+                                <state key="normal" backgroundImage="createsnap_btn"/>
                                 <connections>
-                                    <action selector="captureControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="r5I-tA-DKg"/>
-                                </connections>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ur7-du-gh5">
-                                <rect key="frame" x="16" y="28" width="130" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="6aE-5M-GOy"/>
-                                    <constraint firstAttribute="height" constant="30" id="pap-CF-c9S"/>
-                                </constraints>
-                                <state key="normal" title="Live Photo Button"/>
-                                <connections>
-                                    <action selector="livePhotoToggleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Us-c9-lTy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5K-yj-01r">
-                                <rect key="frame" x="167.5" y="619" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="MqB-Mi-ge8"/>
-                                    <constraint firstAttribute="width" constant="40" id="b2e-zj-ThH"/>
-                                </constraints>
-                                <state key="normal" image="createsnap_btn"/>
-                                <connections>
-                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w7F-vg-o3Y"/>
+                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJd-1G-5mF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-G1-C9A">
@@ -106,37 +75,29 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="S5K-yj-01r" firstAttribute="top" secondItem="F7K-dV-U3H" secondAttribute="bottom" constant="40" id="0cB-T9-dWg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S5K-yj-01r" secondAttribute="bottom" constant="8" id="0gm-mf-84J"/>
                             <constraint firstAttribute="trailing" secondItem="SVZ-PX-Dvo" secondAttribute="trailing" id="2Ze-S6-m6e"/>
                             <constraint firstItem="SyJ-CL-wYH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Bh-WA-Vtm"/>
                             <constraint firstItem="eTw-Pr-KYl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AtV-ZF-khH"/>
                             <constraint firstItem="S5K-yj-01r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BmD-VW-96F"/>
                             <constraint firstItem="SVZ-PX-Dvo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Crd-SV-Inp"/>
-                            <constraint firstItem="ur7-du-gh5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HVk-ez-wjx"/>
                             <constraint firstItem="Dmi-G1-C9A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Qji-R3-krb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dmi-G1-C9A" secondAttribute="trailing" id="Yg6-Ts-JY2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0gQ-n4-Tb9" secondAttribute="trailing" id="Yt3-on-fVR"/>
                             <constraint firstItem="SVZ-PX-Dvo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a6v-js-pRo"/>
                             <constraint firstItem="eTw-Pr-KYl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="aNQ-6E-N9Y"/>
-                            <constraint firstItem="mN6-3W-SmG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="d47-BS-MI2"/>
                             <constraint firstItem="SyJ-CL-wYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ebc-s0-IXk"/>
-                            <constraint firstItem="mN6-3W-SmG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJv-tu-rLG"/>
-                            <constraint firstItem="F7K-dV-U3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mn6-zx-zAn"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0gQ-n4-Tb9" secondAttribute="bottom" constant="8" id="pvS-2B-2l8"/>
-                            <constraint firstItem="ur7-du-gh5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="sod-Dg-aJe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SVZ-PX-Dvo" secondAttribute="bottom" id="tRR-UC-y37"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="Dmi-G1-C9A" id="mhQ-CD-QkP"/>
                         <outlet property="cameraUnavailableLabel" destination="eTw-Pr-KYl" id="7kE-RD-dKO"/>
-                        <outlet property="captureModeControl" destination="F7K-dV-U3H" id="esq-6N-3Bi"/>
-                        <outlet property="capturingLivePhotoLabel" destination="mN6-3W-SmG" id="lKP-AJ-Uf9"/>
-                        <outlet property="livePhotoButton" destination="ur7-du-gh5" id="L62-a0-qwh"/>
                         <outlet property="photoButton" destination="0gQ-n4-Tb9" id="5JG-c9-DqD"/>
                         <outlet property="previewView" destination="SVZ-PX-Dvo" id="27r-Rg-FlY"/>
                         <outlet property="recordButton" destination="S5K-yj-01r" id="MPw-6I-bhq"/>
+                        <outlet property="resumeButton" destination="SyJ-CL-wYH" id="7t8-D8-gN1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
