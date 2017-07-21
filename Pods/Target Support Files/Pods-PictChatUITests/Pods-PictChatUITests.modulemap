@@ -1,0 +1,6 @@
+framework module Pods_PictChatUITests {
+  umbrella header "Pods-PictChatUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -17,6 +17,10 @@
 		06BF4E4B1F20203C0001BD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4E491F20203C0001BD3C /* LaunchScreen.storyboard */; };
 		06BF4E561F20203C0001BD3C /* PictChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E551F20203C0001BD3C /* PictChatTests.swift */; };
 		06BF4E611F20203C0001BD3C /* PictChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E601F20203C0001BD3C /* PictChatUITests.swift */; };
+		06DA22A01F21874A003BD7ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DA229F1F21874A003BD7ED /* GoogleService-Info.plist */; };
+		10D94192E597A1917EB516AB /* Pods_PictChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEFABE9258D749C861F1716 /* Pods_PictChatTests.framework */; };
+		4DC9FB0AD7082C19409D3520 /* Pods_PictChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73328B298062F397512C1C35 /* Pods_PictChat.framework */; };
+		D0CF1B6DFC9F4ADB980FFCEC /* Pods_PictChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E09FC3B6997AD8525225267 /* Pods_PictChatUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,16 @@
 		06BF4E5C1F20203C0001BD3C /* PictChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BF4E601F20203C0001BD3C /* PictChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictChatUITests.swift; sourceTree = "<group>"; };
 		06BF4E621F20203C0001BD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06DA229F1F21874A003BD7ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4300268DD5BCB2A5D49E43D1 /* Pods-PictChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PictChatTests/Pods-PictChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		446BC496AB957181DD7521AC /* Pods-PictChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PictChatTests/Pods-PictChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54D7DCE694B8CFE171E989A1 /* Pods-PictChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PictChatUITests/Pods-PictChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		73328B298062F397512C1C35 /* Pods_PictChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PictChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75EBE435467D012628521C1E /* Pods-PictChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PictChat/Pods-PictChat.release.xcconfig"; sourceTree = "<group>"; };
+		77556204A3FC9712D664D342 /* Pods-PictChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PictChat/Pods-PictChat.debug.xcconfig"; sourceTree = "<group>"; };
+		7E09FC3B6997AD8525225267 /* Pods_PictChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PictChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E0F27A7D11D574A31FF071 /* Pods-PictChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PictChatUITests/Pods-PictChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DAEFABE9258D749C861F1716 /* Pods_PictChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PictChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC9FB0AD7082C19409D3520 /* Pods_PictChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D94192E597A1917EB516AB /* Pods_PictChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CF1B6DFC9F4ADB980FFCEC /* Pods_PictChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +135,8 @@
 				06BF4E541F20203C0001BD3C /* PictChatTests */,
 				06BF4E5F1F20203C0001BD3C /* PictChatUITests */,
 				06BF4E3E1F20203C0001BD3C /* Products */,
+				60961F2ED4216EEF55583AF1 /* Pods */,
+				B35D87A166936CCF94386467 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +163,7 @@
 				06BF4E471F20203C0001BD3C /* Assets.xcassets */,
 				06BF4E491F20203C0001BD3C /* LaunchScreen.storyboard */,
 				06BF4E4C1F20203C0001BD3C /* Info.plist */,
+				06DA229F1F21874A003BD7ED /* GoogleService-Info.plist */,
 			);
 			path = PictChat;
 			sourceTree = "<group>";
@@ -166,6 +186,29 @@
 			path = PictChatUITests;
 			sourceTree = "<group>";
 		};
+		60961F2ED4216EEF55583AF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77556204A3FC9712D664D342 /* Pods-PictChat.debug.xcconfig */,
+				75EBE435467D012628521C1E /* Pods-PictChat.release.xcconfig */,
+				446BC496AB957181DD7521AC /* Pods-PictChatTests.debug.xcconfig */,
+				4300268DD5BCB2A5D49E43D1 /* Pods-PictChatTests.release.xcconfig */,
+				93E0F27A7D11D574A31FF071 /* Pods-PictChatUITests.debug.xcconfig */,
+				54D7DCE694B8CFE171E989A1 /* Pods-PictChatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B35D87A166936CCF94386467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73328B298062F397512C1C35 /* Pods_PictChat.framework */,
+				DAEFABE9258D749C861F1716 /* Pods_PictChatTests.framework */,
+				7E09FC3B6997AD8525225267 /* Pods_PictChatUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06BF4E651F20203C0001BD3C /* Build configuration list for PBXNativeTarget "PictChat" */;
 			buildPhases = (
+				06F324FA39C2B77D2E16AC1D /* [CP] Check Pods Manifest.lock */,
 				06BF4E391F20203C0001BD3C /* Sources */,
 				06BF4E3A1F20203C0001BD3C /* Frameworks */,
 				06BF4E3B1F20203C0001BD3C /* Resources */,
+				65897AC9D0DE4D5838FEA1E7 /* [CP] Embed Pods Frameworks */,
+				639E8862CBEC9E70C310EC7D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06BF4E681F20203C0001BD3C /* Build configuration list for PBXNativeTarget "PictChatTests" */;
 			buildPhases = (
+				FBA598A9AD4E5361330B23EE /* [CP] Check Pods Manifest.lock */,
 				06BF4E4D1F20203C0001BD3C /* Sources */,
 				06BF4E4E1F20203C0001BD3C /* Frameworks */,
 				06BF4E4F1F20203C0001BD3C /* Resources */,
+				79F558E88CC79C2D5D5AFAF8 /* [CP] Embed Pods Frameworks */,
+				2D7EA1E7AA6299685EEF3B28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06BF4E6B1F20203C0001BD3C /* Build configuration list for PBXNativeTarget "PictChatUITests" */;
 			buildPhases = (
+				14501D78B3B196B51CEA5526 /* [CP] Check Pods Manifest.lock */,
 				06BF4E581F20203C0001BD3C /* Sources */,
 				06BF4E591F20203C0001BD3C /* Frameworks */,
 				06BF4E5A1F20203C0001BD3C /* Resources */,
+				289615A2A2793C7CB3C657F0 /* [CP] Embed Pods Frameworks */,
+				624F633D993F30CEA90F0A33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BF4E4B1F20203C0001BD3C /* LaunchScreen.storyboard in Resources */,
+				06DA22A01F21874A003BD7ED /* GoogleService-Info.plist in Resources */,
 				06BF4E481F20203C0001BD3C /* Assets.xcassets in Resources */,
 				06BF4E461F20203C0001BD3C /* Main.storyboard in Resources */,
 			);
@@ -296,6 +349,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06F324FA39C2B77D2E16AC1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		14501D78B3B196B51CEA5526 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		289615A2A2793C7CB3C657F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PictChatUITests/Pods-PictChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D7EA1E7AA6299685EEF3B28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PictChatTests/Pods-PictChatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		624F633D993F30CEA90F0A33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PictChatUITests/Pods-PictChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		639E8862CBEC9E70C310EC7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PictChat/Pods-PictChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65897AC9D0DE4D5838FEA1E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PictChat/Pods-PictChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79F558E88CC79C2D5D5AFAF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PictChatTests/Pods-PictChatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA598A9AD4E5361330B23EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06BF4E391F20203C0001BD3C /* Sources */ = {
@@ -458,6 +649,7 @@
 		};
 		06BF4E661F20203C0001BD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77556204A3FC9712D664D342 /* Pods-PictChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JMD8Z549B7;
@@ -471,6 +663,7 @@
 		};
 		06BF4E671F20203C0001BD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75EBE435467D012628521C1E /* Pods-PictChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JMD8Z549B7;
@@ -484,6 +677,7 @@
 		};
 		06BF4E691F20203C0001BD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 446BC496AB957181DD7521AC /* Pods-PictChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +693,7 @@
 		};
 		06BF4E6A1F20203C0001BD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4300268DD5BCB2A5D49E43D1 /* Pods-PictChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +709,7 @@
 		};
 		06BF4E6C1F20203C0001BD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E0F27A7D11D574A31FF071 /* Pods-PictChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JMD8Z549B7;
@@ -528,6 +724,7 @@
 		};
 		06BF4E6D1F20203C0001BD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54D7DCE694B8CFE171E989A1 /* Pods-PictChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JMD8Z549B7;
