@@ -10,7 +10,6 @@
 		060CF1901F20373C00767734 /* AAPLCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060CF18E1F20373C00767734 /* AAPLCameraViewController.swift */; };
 		060CF1911F20373C00767734 /* AAPLPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060CF18F1F20373C00767734 /* AAPLPreviewView.swift */; };
 		060CF1961F2037C900767734 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060CF1951F2037C900767734 /* PhotoCaptureDelegate.swift */; };
-		060CF19C1F21696200767734 /* AAPLCameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060CF19B1F21696200767734 /* AAPLCameraVCDelegate.swift */; };
 		06BF4E411F20203C0001BD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E401F20203C0001BD3C /* AppDelegate.swift */; };
 		06BF4E431F20203C0001BD3C /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4E421F20203C0001BD3C /* CameraVC.swift */; };
 		06BF4E461F20203C0001BD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4E441F20203C0001BD3C /* Main.storyboard */; };
@@ -41,7 +40,6 @@
 		060CF18E1F20373C00767734 /* AAPLCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLCameraViewController.swift; sourceTree = "<group>"; };
 		060CF18F1F20373C00767734 /* AAPLPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLPreviewView.swift; sourceTree = "<group>"; };
 		060CF1951F2037C900767734 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
-		060CF19B1F21696200767734 /* AAPLCameraVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLCameraVCDelegate.swift; sourceTree = "<group>"; };
 		06BF4E3D1F20203C0001BD3C /* PictChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BF4E401F20203C0001BD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06BF4E421F20203C0001BD3C /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 		060CF19A1F21693800767734 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				060CF19B1F21696200767734 /* AAPLCameraVCDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -141,8 +138,8 @@
 				060CF1941F20375000767734 /* Controller */,
 				060CF1931F20374A00767734 /* View */,
 				060CF1921F20374000767734 /* Model */,
-				06BF4E401F20203C0001BD3C /* AppDelegate.swift */,
 				060CF1951F2037C900767734 /* PhotoCaptureDelegate.swift */,
+				06BF4E401F20203C0001BD3C /* AppDelegate.swift */,
 				06BF4E441F20203C0001BD3C /* Main.storyboard */,
 				06BF4E471F20203C0001BD3C /* Assets.xcassets */,
 				06BF4E491F20203C0001BD3C /* LaunchScreen.storyboard */,
@@ -309,7 +306,6 @@
 				060CF1911F20373C00767734 /* AAPLPreviewView.swift in Sources */,
 				06BF4E411F20203C0001BD3C /* AppDelegate.swift in Sources */,
 				060CF1961F2037C900767734 /* PhotoCaptureDelegate.swift in Sources */,
-				060CF19C1F21696200767734 /* AAPLCameraVCDelegate.swift in Sources */,
 				060CF1901F20373C00767734 /* AAPLCameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

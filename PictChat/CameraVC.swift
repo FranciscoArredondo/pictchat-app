@@ -32,8 +32,9 @@ class CameraVC: AAPLCameraViewController {
         _resumeButton = resumeButton
         _cameraUnavailableLabel = cameraUnavailableLabel
         
-        
         super.viewDidLoad()
+        
+        // start app in video recording mode
         toggleCaptureMode(captureMode: .movie)
     }
 
