@@ -13,6 +13,8 @@ import Photos
 class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     // MARK: View Controller Life Cycle
     
+    weak var delegate: AAPLCaeraVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -720,9 +722,13 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
         if error != nil {
             print("Movie file finishing error: \(error)")
             success = (((error as NSError).userInfo[AVErrorRecordingSuccessfullyFinishedKey] as AnyObject).boolValue)!
+            
+            self.delegate?.videoRecordingFailed()
         }
         
         if success {
+            self.delegate?.videoRecordingComplete(videoUrl: outputFileURL! as NSURL)
+            /*
             // Check authorization status.
             PHPhotoLibrary.requestAuthorization { status in
                 if status == .authorized {
@@ -744,8 +750,10 @@ class AAPLCameraViewController: UIViewController, AVCaptureFileOutputRecordingDe
                     cleanup()
                 }
             }
+         */
         }
         else {
+            self.delegate?.videoRecordingFailed()
             cleanup()
         }
         

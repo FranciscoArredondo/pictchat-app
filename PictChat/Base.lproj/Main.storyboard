@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hEW-Bl-Cvg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -99,6 +99,7 @@
                         <outlet property="recordButton" destination="S5K-yj-01r" id="MPw-6I-bhq"/>
                         <outlet property="resumeButton" destination="SyJ-CL-wYH" id="7t8-D8-gN1"/>
                         <segue destination="ksm-r0-bU0" kind="presentation" identifier="LoginVC" id="cTH-Vq-QFo"/>
+                        <segue destination="hEW-Bl-Cvg" kind="show" identifier="UsersVC" id="c0i-V6-bSm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -274,7 +275,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xsJ-qH-4X9">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="128" width="320" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="50" id="3m9-gx-4XN" customClass="UserCell" customModule="PictChat" customModuleProvider="target">
@@ -306,8 +307,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myj-mx-J21">
+                                <rect key="frame" x="0.0" y="40" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="S61-1w-5vq"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Send a Snap" id="pYq-Ww-6I5">
+                                        <barButtonItem key="rightBarButtonItem" image="send_snap" id="Xyg-ZW-OOv">
+                                            <connections>
+                                                <action selector="sendSnapButtonPressed:" destination="hEW-Bl-Cvg" id="zZi-Z6-7It"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z9p-zC-fRn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="84" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -315,11 +331,14 @@
                         <constraints>
                             <constraint firstItem="zYD-gP-GXw" firstAttribute="top" secondItem="xsJ-qH-4X9" secondAttribute="bottom" id="2ll-TS-i6S"/>
                             <constraint firstItem="z9p-zC-fRn" firstAttribute="leading" secondItem="7sD-7S-n5F" secondAttribute="leading" id="5XS-5n-nPU"/>
-                            <constraint firstItem="z9p-zC-fRn" firstAttribute="top" secondItem="7sD-7S-n5F" secondAttribute="top" id="XwV-cl-JlG"/>
+                            <constraint firstItem="z9p-zC-fRn" firstAttribute="top" secondItem="Myj-mx-J21" secondAttribute="bottom" id="X69-uK-SYl"/>
                             <constraint firstItem="xsJ-qH-4X9" firstAttribute="top" secondItem="z9p-zC-fRn" secondAttribute="bottom" id="edG-sE-b0D"/>
                             <constraint firstItem="xsJ-qH-4X9" firstAttribute="leading" secondItem="7sD-7S-n5F" secondAttribute="leading" id="oTw-SL-NHj"/>
+                            <constraint firstItem="Myj-mx-J21" firstAttribute="top" secondItem="tj9-cr-JVR" secondAttribute="bottom" constant="20" id="pLH-dV-3je"/>
+                            <constraint firstItem="Myj-mx-J21" firstAttribute="leading" secondItem="7sD-7S-n5F" secondAttribute="leading" id="pgy-Kc-aOH"/>
                             <constraint firstAttribute="trailing" secondItem="xsJ-qH-4X9" secondAttribute="trailing" id="reJ-N2-WUx"/>
                             <constraint firstAttribute="trailing" secondItem="z9p-zC-fRn" secondAttribute="trailing" id="wxX-eu-eXA"/>
+                            <constraint firstAttribute="trailing" secondItem="Myj-mx-J21" secondAttribute="trailing" id="yN1-ba-ew4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -328,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xv-IM-ag0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729.375" y="122.53521126760563"/>
+            <point key="canvasLocation" x="-819.375" y="-604.22535211267609"/>
         </scene>
     </scenes>
     <resources>
@@ -336,5 +355,6 @@
         <image name="createsnap_btn" width="30" height="30"/>
         <image name="dev" width="1080" height="1349"/>
         <image name="logo" width="671" height="186"/>
+        <image name="send_snap" width="24" height="23"/>
     </resources>
 </document>

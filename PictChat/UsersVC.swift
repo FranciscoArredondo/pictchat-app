@@ -16,6 +16,25 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     fileprivate var users = [User]()
     fileprivate var selectedUsers =  Dictionary<String, User>()
     
+    fileprivate var _snapData: Data?
+    fileprivate var _videoUrl: NSURL?
+    
+    var snapData: Data? {
+        set {
+            _snapData = newValue
+        } get {
+            return _snapData
+        }
+    }
+    
+    var videoUrl: NSURL? {
+        set {
+            _videoUrl = newValue
+        } get {
+            return _videoUrl
+        }
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -23,6 +42,8 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsMultipleSelection = true
+        
+        navigationItem.rightBarButtonItem?.isEnabled = false
         
         //TODO -  move to the User model class
         DataService.instance.usersReference.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -53,6 +74,7 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationItem.rightBarButtonItem?.isEnabled = true
         let cell = tableView.cellForRow(at: indexPath) as! UserCell
         cell.setCheckmark(selected: true)
         let user = users[indexPath.row]
@@ -64,6 +86,10 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.setCheckmark(selected: false)
         let user = users[indexPath.row]
         selectedUsers[user.uid] = nil
+        
+        if selectedUsers.count <= 0 {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,5 +99,32 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
-
+    
+    @IBAction func sendSnapButtonPressed(_ sender: UIBarButtonItem) {
+        if let url = _videoUrl {
+            let videoName = "\(NSUUID().uuidString)\(url)"
+            let ref = DataService.instance.videoStorageReference.child(videoName)
+            
+            _ = ref.putFile(from: url as URL, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    print("PF: error uploading video to firebase storage - \(String(describing: error?.localizedDescription))")
+                } else {
+                    let downloadUrl = metadata?.downloadURL()
+                    // save this somewhere
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        } else if let snap = _snapData {
+            let ref = DataService.instance.imagesStorageReference.child("\(UUID().uuidString).jpg")
+            ref.putData(snap, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    print("PF: error uploading snapshot - \(String(describing: error?.localizedDescription))")
+                } else {
+                    let downloadUrl = metadata?.downloadURL()
+                    // save this somewhere
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        }
+    }
 }

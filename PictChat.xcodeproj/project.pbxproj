@@ -24,6 +24,7 @@
 		06D161C91F22C3CA00B467E1 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D161C81F22C3CA00B467E1 /* UsersVC.swift */; };
 		06D161CB1F22C6FF00B467E1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D161CA1F22C6FF00B467E1 /* UserCell.swift */; };
 		06D161CD1F22D3FE00B467E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D161CC1F22D3FE00B467E1 /* User.swift */; };
+		06D161CF1F22DF8100B467E1 /* AAPLCameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D161CE1F22DF8100B467E1 /* AAPLCameraVCDelegate.swift */; };
 		06DA22A01F21874A003BD7ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DA229F1F21874A003BD7ED /* GoogleService-Info.plist */; };
 		06FA2C9D1F21C2F00044ED97 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA2C9C1F21C2F00044ED97 /* RoundTextField.swift */; };
 		10D94192E597A1917EB516AB /* Pods_PictChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEFABE9258D749C861F1716 /* Pods_PictChatTests.framework */; };
@@ -72,6 +73,7 @@
 		06D161C81F22C3CA00B467E1 /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		06D161CA1F22C6FF00B467E1 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		06D161CC1F22D3FE00B467E1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		06D161CE1F22DF8100B467E1 /* AAPLCameraVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLCameraVCDelegate.swift; sourceTree = "<group>"; };
 		06DA229F1F21874A003BD7ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		06FA2C9C1F21C2F00044ED97 /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		4300268DD5BCB2A5D49E43D1 /* Pods-PictChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PictChatTests/Pods-PictChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		060CF19A1F21693800767734 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				06D161CE1F22DF8100B467E1 /* AAPLCameraVCDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				0667DFC11F21CFD800C94147 /* RoundedButton.swift in Sources */,
 				06FA2C9D1F21C2F00044ED97 /* RoundTextField.swift in Sources */,
 				06D161CB1F22C6FF00B467E1 /* UserCell.swift in Sources */,
+				06D161CF1F22DF8100B467E1 /* AAPLCameraVCDelegate.swift in Sources */,
 				06D161C91F22C3CA00B467E1 /* UsersVC.swift in Sources */,
 				060CF1901F20373C00767734 /* AAPLCameraViewController.swift in Sources */,
 				06D161C71F22BFDF00B467E1 /* DataService.swift in Sources */,

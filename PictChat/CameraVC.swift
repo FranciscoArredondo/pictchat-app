@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class CameraVC: AAPLCameraViewController {
+class CameraVC: AAPLCameraViewController, AAPLCaeraVCDelegate {
 
     @IBOutlet weak var previewView: AAPLPreviewView!
     
@@ -33,6 +33,8 @@ class CameraVC: AAPLCameraViewController {
         _resumeButton = resumeButton
         _cameraUnavailableLabel = cameraUnavailableLabel
         
+        delegate = self
+        
         super.viewDidLoad()
         
         // start app in video recording mode
@@ -46,6 +48,36 @@ class CameraVC: AAPLCameraViewController {
             return
         }
     }
+    
+    func videoRecordingFailed() {
+        print("PF: Video recording failed")
+    }
+    
+    func videoRecordingComplete(videoUrl: NSURL) {
+        print("PF: videoRecordingComplete delegate func was called!")
+        performSegue(withIdentifier: "UsersVC", sender: ["videoUrl":videoUrl])
+    }
+    
+    func snapShotFailed() {
+        print("PF: Snapshot failed")
+    }
+    
+    func snapshotTaken(snapshotData: NSData) {
+        performSegue(withIdentifier: "UsersVC", sender: ["snapshotData":snapshotData])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let usersVC = segue.destination as? UsersVC {
+            if let videoDict = sender as? Dictionary<String, URL> {
+                let url = videoDict["videoUrl"]
+                usersVC.videoUrl = url! as NSURL
+            } else if let snapDict = sender as? Dictionary<String, Data> {
+                let snapData = snapDict["snapshotData"]
+                usersVC.snapData = snapData
+            }
+        }
+    }
+    
 
     @IBAction func recordButtonPressed(_ sender: UIButton) {
         toggleMovieRecording()
@@ -62,6 +94,8 @@ class CameraVC: AAPLCameraViewController {
     @IBAction func photoButtonPressed(_ sender: UIButton) {
         capturePhoto()
     }
+    
+    
     
 }
 
